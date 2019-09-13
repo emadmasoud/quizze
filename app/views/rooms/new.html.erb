@@ -1,0 +1,11 @@
+<div class="box col-10 offset-1">
+  <h2>Enter Construction Details</h2>
+  <%= simple_form_for @room do |f| %>
+    <%= f.input :department %>
+    <%= f.input :building %>
+    <%= f.input :room_num %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+</div>

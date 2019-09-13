@@ -1,0 +1,15 @@
+<% @rooms.each do |room| %>
+  <div class="box col-10 offset-1">
+    <h2><%= room.department %></h2>
+    <b>Building:</b>  <%= room.building %><br />
+    <b>Room Number:</b>  <%= room.room_num %><br />
+    <b>Work Description:</b>  <p><%= room.description %></p><br />
+  </div>
+<% end %>
+
+<div class="digg_pagination col-10 offset-1">
+    <div class="page_info">
+      <%= page_entries_info @rooms %>
+    </div>
+    <%= will_paginate @rooms, :container => false %>
+  </div>
